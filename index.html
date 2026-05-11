@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кек код — документация</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', 'Fira Code', monospace;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff7b72;
+            border-left: 4px solid #ff7b72;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub {
+            color: #8b949e;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #d2a8ff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #3d444d;
+            padding-bottom: 0.3rem;
+        }
+
+        .command {
+            background: #161b22;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #3d444d;
+        }
+
+        .command-name {
+            background: #21262d;
+            padding: 0.7rem 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff7b72;
+            border-bottom: 1px solid #3d444d;
+        }
+
+        .command-desc {
+            padding: 1rem;
+            color: #e6edf3;
+            border-bottom: 1px solid #2d333b;
+        }
+
+        .command-syntax {
+            padding: 0.7rem 1rem;
+            background: #0d1117;
+            font-family: monospace;
+            color: #a5d6ff;
+            border-bottom: 1px solid #2d333b;
+        }
+
+        .command-example {
+            padding: 1rem;
+            background: #010409;
+            font-family: monospace;
+            color: #7ee787;
+            white-space: pre-wrap;
+        }
+
+        .command-example-title {
+            color: #8b949e;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            color: #ffa657;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.8rem;
+            border-top: 1px solid #3d444d;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐸 Кек код</h1>
+        <div class="sub">эзотерический язык программирования для настоящих кексов</div>
+
+        <h2>📖 О языке</h2>
+        <p>Кек код — это минималистичный язык, где каждая команда пишется с маленькой буквы. Аргументы всегда идут на следующей строке, без пробелов и лишних символов. Никаких скобок, никаких запятых — только команда и строка аргумента.</p>
+
+        <h2>⚙️ Правила синтаксиса</h2>
+        <p>1. Все команды пишутся с маленькой буквы. Пример: <code>пукнуть</code>, а не <code>Пукнуть</code>.<br>
+        2. Аргумент команды пишется на следующей строке.<br>
+        3. Для многострочных текстов просто пишите текст в следующей строке сколько угодно — он идёт целиком до следующей команды.<br>
+        4. Комментарии не поддерживаются. Кек код не для слабонервных.</p>
+
+        <h2>📚 Команды</h2>
+
+        <!-- изменить заголовок -->
+        <div class="command">
+            <div class="command-name">изменить заголовок</div>
+            <div class="command-desc">Изменяет заголовок окна на заданный.</div>
+            <div class="command-syntax">изменить заголовок<br><span style="color:#ffa657;">[новый заголовок]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+изменить заголовок
+Моя супер программа
+            </div>
+        </div>
+
+        <!-- пукнуть -->
+        <div class="command">
+            <div class="command-name">пукнуть</div>
+            <div class="command-desc">Издаёт звук пука. Аргументом можно указать громкость (от 1 до 100, по умолчанию 42).</div>
+            <div class="command-syntax">пукнуть<br><span style="color:#ffa657;">[громкость]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+пукнуть
+69
+            </div>
+        </div>
+
+        <!-- переместить Васю -->
+        <div class="command">
+            <div class="command-name">переместить Васю</div>
+            <div class="command-desc">Перемещает точку (или курсор, или Васю) на экране. Первый аргумент — X, второй — Y. Координаты в пикселях.</div>
+            <div class="command-syntax">переместить Васю<br><span style="color:#ffa657;">[x]</span><br><span style="color:#ffa657;">[y]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+переместить Васю
+300
+500
+            </div>
+        </div>
+
+        <!-- сказать -->
+        <div class="command">
+            <div class="command-name">сказать</div>
+            <div class="command-desc">Превращает текст в речь (синтезатор голоса). Один аргумент — фраза для озвучки.</div>
+            <div class="command-syntax">сказать<br><span style="color:#ffa657;">[текст]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+сказать
+Привет, я кек код, и я умею говорить!
+            </div>
+        </div>
+
+        <!-- написать -->
+        <div class="command">
+            <div class="command-name">написать</div>
+            <div class="command-desc">Отправляет сообщение контакту. Первый аргумент — номер телефона, второй — текст сообщения. Только если приложение запущено на Android с разрешениями.</div>
+            <div class="command-syntax">написать<br><span style="color:#ffa657;">[номер телефона]</span><br><span style="color:#ffa657;">[сообщение]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+написать
++71234567890
+Привет, это кек код!
+            </div>
+        </div>
+
+        <!-- изменить переменную -->
+        <div class="command">
+            <div class="command-name">изменить переменную</div>
+            <div class="command-desc">Меняет значение переменной. Если переменной не существует, она создаётся. Первый аргумент — имя переменной, второй — новое значение.</div>
+            <div class="command-syntax">изменить переменную<br><span style="color:#ffa657;">[имя]</span><br><span style="color:#ffa657;">[значение]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+изменить переменную
+счёт
+10
+            </div>
+        </div>
+
+        <!-- ждать ввод -->
+        <div class="command">
+            <div class="command-name">ждать ввод</div>
+            <div class="command-desc">Останавливает программу и ждёт, пока пользователь нажмёт Enter (или кнопку «Ввод»). Прочитанный текст сохраняется в переменную, указанную аргументом.</div>
+            <div class="command-syntax">ждать ввод<br><span style="color:#ffa657;">[переменная]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+ждать ввод
+ответ
+            </div>
+        </div>
+
+        <!-- obtenir пароль -->
+        <div class="command">
+            <div class="command-name">получить пароль</div>
+            <div class="command-desc">Читает то, что пользователь ввёл в поле «пароль» (обычно из скрытого поля ввода). Не ждёт ввода, просто берёт текущее значение. Аргумент — переменная для сохранения.</div>
+            <div class="command-syntax">получить пароль<br><span style="color:#ffa657;">[переменная]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+получить пароль
+пароль_юзера
+            </div>
+        </div>
+
+        <!-- подождать -->
+        <div class="command">
+            <div class="command-name">подождать</div>
+            <div class="command-desc">Приостанавливает выполнение программы на заданное количество тиков. 1000 тиков = 1 секунда.</div>
+            <div class="command-syntax">подождать<br><span style="color:#ffa657;">[тики]</span></div>
+            <div class="command-example-title">▶ Пример:</div>
+            <div class="command-example">
+подождать
+2000
+            </div>
+        </div>
+
+        <h2>📝 Пример программы</h2>
+        <div class="command">
+            <div class="command-name">полная программа на Кек коде</div>
+            <div class="command-example">
+изменить заголовок
+Кек код Программа
+изменить переменную
+попытки
+3
+изменить переменную
+загадка
+Сколько будет 2+2?
+сказать
+Отгадай загадку!
+ждать ввод
+ответ
+изменить переменную
+результат
+Хорошая попытка, но неверно.
+сказать
+Твой ответ был: 
+получить пароль
+ответ_польз
+сказать
+ответ_польз
+пукнуть
+50
+            </div>
+        </div>
+
+        <div class="footer">
+            🐸 Кек код — язык для кексов и тех, кто хочет кекнуть. Не пытайтесь повторить это на работе.<br>
+            Документация версии 1.0
+        </div>
+    </div>
+</body>
+</html>
