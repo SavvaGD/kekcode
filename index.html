@@ -122,7 +122,6 @@
 
         <h2>📚 Команды</h2>
 
-        <!-- изменить заголовок -->
         <div class="command">
             <div class="command-name">изменить заголовок</div>
             <div class="command-desc">Изменяет заголовок окна на заданный.</div>
@@ -134,22 +133,19 @@
             </div>
         </div>
 
-        <!-- пукнуть -->
         <div class="command">
             <div class="command-name">пукнуть</div>
-            <div class="command-desc">Издаёт звук пука. Аргументом можно указать громкость (от 1 до 100, по умолчанию 42).</div>
-            <div class="command-syntax">пукнуть<br><span style="color:#ffa657;">[громкость]</span></div>
+            <div class="command-desc">Издаёт звук пука.</div>
+            <div class="command-syntax">пукнуть</div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
 пукнуть
-69
             </div>
         </div>
 
-        <!-- переместить Васю -->
         <div class="command">
             <div class="command-name">переместить Васю</div>
-            <div class="command-desc">Перемещает точку (или курсор, или Васю) на экране. Первый аргумент — X, второй — Y. Координаты в пикселях.</div>
+            <div class="command-desc">Перемещает точку на экране на заданные координаты. Первый аргумент — X, второй — Y.</div>
             <div class="command-syntax">переместить Васю<br><span style="color:#ffa657;">[x]</span><br><span style="color:#ffa657;">[y]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
@@ -159,35 +155,32 @@
             </div>
         </div>
 
-        <!-- сказать -->
         <div class="command">
             <div class="command-name">сказать</div>
-            <div class="command-desc">Превращает текст в речь (синтезатор голоса). Один аргумент — фраза для озвучки.</div>
+            <div class="command-desc">Превращает текст в речь. Один аргумент — фраза.</div>
             <div class="command-syntax">сказать<br><span style="color:#ffa657;">[текст]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
 сказать
-Привет, я кек код, и я умею говорить!
+Привет, я кек код!
             </div>
         </div>
 
-        <!-- написать -->
         <div class="command">
             <div class="command-name">написать</div>
-            <div class="command-desc">Отправляет сообщение контакту. Первый аргумент — номер телефона, второй — текст сообщения. Только если приложение запущено на Android с разрешениями.</div>
-            <div class="command-syntax">написать<br><span style="color:#ffa657;">[номер телефона]</span><br><span style="color:#ffa657;">[сообщение]</span></div>
+            <div class="command-desc">Отправляет сообщение контакту. Первый аргумент — номер телефона, второй — текст сообщения.</div>
+            <div class="command-syntax">написать<br><span style="color:#ffa657;">[номер]</span><br><span style="color:#ffa657;">[сообщение]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
 написать
 +71234567890
-Привет, это кек код!
+Привет из кек кода
             </div>
         </div>
 
-        <!-- изменить переменную -->
         <div class="command">
             <div class="command-name">изменить переменную</div>
-            <div class="command-desc">Меняет значение переменной. Если переменной не существует, она создаётся. Первый аргумент — имя переменной, второй — новое значение.</div>
+            <div class="command-desc">Изменяет переменную. Первый аргумент — название переменной, второй — новое значение.</div>
             <div class="command-syntax">изменить переменную<br><span style="color:#ffa657;">[имя]</span><br><span style="color:#ffa657;">[значение]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
@@ -197,10 +190,9 @@
             </div>
         </div>
 
-        <!-- ждать ввод -->
         <div class="command">
             <div class="command-name">ждать ввод</div>
-            <div class="command-desc">Останавливает программу и ждёт, пока пользователь нажмёт Enter (или кнопку «Ввод»). Прочитанный текст сохраняется в переменную, указанную аргументом.</div>
+            <div class="command-desc">Ждёт пока пользователь нажмёт кнопку «Ввод» в приложении и сохраняет написанное в переменную. Аргумент — переменная.</div>
             <div class="command-syntax">ждать ввод<br><span style="color:#ffa657;">[переменная]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
@@ -209,10 +201,9 @@
             </div>
         </div>
 
-        <!-- obtenir пароль -->
         <div class="command">
             <div class="command-name">получить пароль</div>
-            <div class="command-desc">Читает то, что пользователь ввёл в поле «пароль» (обычно из скрытого поля ввода). Не ждёт ввода, просто берёт текущее значение. Аргумент — переменная для сохранения.</div>
+            <div class="command-desc">Отдаёт то что написано в строке «пароль». Аргумент — переменная для сохранения. Не ждёт ввода, берёт текущее значение.</div>
             <div class="command-syntax">получить пароль<br><span style="color:#ffa657;">[переменная]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
@@ -221,10 +212,9 @@
             </div>
         </div>
 
-        <!-- подождать -->
         <div class="command">
             <div class="command-name">подождать</div>
-            <div class="command-desc">Приостанавливает выполнение программы на заданное количество тиков. 1000 тиков = 1 секунда.</div>
+            <div class="command-desc">Ждёт указанное время в тиках. 1000 тиков = 1 секунда.</div>
             <div class="command-syntax">подождать<br><span style="color:#ffa657;">[тики]</span></div>
             <div class="command-example-title">▶ Пример:</div>
             <div class="command-example">
@@ -238,34 +228,21 @@
             <div class="command-name">полная программа на Кек коде</div>
             <div class="command-example">
 изменить заголовок
-Кек код Программа
-изменить переменную
-попытки
-3
-изменить переменную
-загадка
-Сколько будет 2+2?
+Кек код
 сказать
-Отгадай загадку!
+Введи свой ответ
 ждать ввод
 ответ
+получить пароль
+пароль
 изменить переменную
 результат
-Хорошая попытка, но неверно.
-сказать
-Твой ответ был: 
-получить пароль
-ответ_польз
-сказать
-ответ_польз
-пукнуть
-50
+готово
             </div>
         </div>
 
         <div class="footer">
-            🐸 Кек код — язык для кексов и тех, кто хочет кекнуть. Не пытайтесь повторить это на работе.<br>
-            Документация версии 1.0
+            🐸 Кек код — язык для кексов. Документация версии 1.0
         </div>
     </div>
 </body>
